@@ -1,4 +1,4 @@
-# JavaSript Crash Course 
+# JavaScript Crash Course 
 
 This documentation is designed to quickly teach students the fundamentals of the JavaScript programming language. It is typically geared towards beginners who want to learn JavaScript in a short amount of time.
 
