@@ -71,12 +71,14 @@ console.log(john.name); // Output: "Jane"
 console.log(john.age); // Output: 35
 
 ```
-    In this example, the Person class has a name property and an age property, which are private variables that are defined using the underscore notation (_name and _age). The class also has get and set methods for accessing and modifying these properties, which are defined using the get and set keywords.
 
-    By using the get and set methods, you can control how the name and age properties are accessed and modified, and you can hide the implementation details of these properties from the rest of your code. For example, you can add validation or formatting logic to the set methods, or you can use the get methods to compute derived values from the name and age properties.
+In this example, the Person class has a name property and an age property, which are private variables that are defined using the underscore notation (_name and _age). The class also has get and set methods for accessing and modifying these properties, which are defined using the get and set keywords.
+
+By using the get and set methods, you can control how the name and age properties are accessed and modified, and you can hide the implementation details of these properties from the rest of your code. For example, you can add validation or formatting logic to the set methods, or you can use the get methods to compute derived values from the name and age properties.
 
 
 2. Abstraction: Abstraction is the process of exposing only the relevant and essential features of an object, and hiding the implementation details. It allows you to focus on the essential characteristics of an object, and to ignore the unnecessary or irrelevant details. Abstraction helps to simplify the design and implementation of your code, and to make it more flexible and adaptable to change.
+
 ```
 class PaymentMethod {
   constructor(name) {
@@ -122,19 +124,21 @@ const paymentMethod = new CreditCard('John', '4111 1111 1111 1111', '01/23');
 paymentMethod.charge(100);
 
 ```
-    In this example, the PaymentMethod class is an abstract class that defines a common interface for different types of payment methods. It has a name property and a charge() method, which is an abstract method that does not have a concrete implementation.
 
-    The CreditCard, PayPal, and Cash classes are subclasses of the PaymentMethod class, and they all implement the charge() method with a concrete implementation. The CreditCard class has additional properties for storing the card number and expiration date, the PayPal class has additional properties for storing the email and password, and the Cash class does not have any additional properties.
+In this example, the PaymentMethod class is an abstract class that defines a common interface for different types of payment methods. It has a name property and a charge() method, which is an abstract method that does not have a concrete implementation.
 
-    By using abstraction, you can define a common interface for different types of payment methods, and you can hide the implementation details of each payment method behind the interface. This allows you to create more flexible and adaptable code, and to create more reusable and modular components.
+The CreditCard, PayPal, and Cash classes are subclasses of the PaymentMethod class, and they all implement the charge() method with a concrete implementation. The CreditCard class has additional properties for storing the card number and expiration date, the PayPal class has additional properties for storing the email and password, and the Cash class does not have any additional properties.
 
-    For example, you can create a function that takes a payment method as an argument, and uses the charge() method to process the payment, without knowing the specific type of the payment method:
-    ```
+By using abstraction, you can define a common interface for different types of payment methods, and you can hide the implementation details of each payment method behind the interface. This allows you to create more flexible and adaptable code, and to create more reusable and modular components.
+
+For example, you can create a function that takes a payment method as an argument, and uses the charge() method to process the payment, without knowing the specific type of the payment method:
+
+```
     function processPayment(paymentMethod, amount) {
         paymentMethod.charge
     }); 
 
-    ```
+```
 
 3. Inheritance: Inheritance is a mechanism that allows one class to inherit the properties and methods of another class. It allows you to create a hierarchy of classes, where more specialized classes can inherit the characteristics and behavior of more general classes. Inheritance allows you to reuse and modify the code of existing classes, and to create new classes that are derived from existing ones.
 
@@ -195,9 +199,10 @@ vendingMachine.dispenseProduct(new SoftDrink('Coke', 'Cola'));
 // Output: "Sorry, Coke is out of stock."
 
 ```
-    In this example, the VendingMachine class is a base class that defines a common interface for vending machines. It has a name property, a location property, and an inventory property that stores an array of products. It also has addProduct() and getInventory() methods for adding and accessing the products in the inventory.
+In this example, the VendingMachine class is a base class that defines a common interface for vending machines. It has a name property, a location property, and an inventory property that stores an array of products. It also has addProduct() and getInventory() methods for adding and accessing the products in the inventory.
 
-    The SoftDrinkVendingMachine class is a subclass of the VendingMachine class, and it inherits the name, location, and inventory properties from the base class. It also has a dispenseProduct() method that dispenses a product from the inventory, if it is available
+ The SoftDrinkVendingMachine class is a subclass of the VendingMachine class, and it inherits the name, location, and inventory properties from the base class. It also has a dispenseProduct() method that dispenses a product from the inventory, if it is available
+ 
 4. Polymorphism: Polymorphism is the ability of a single interface to operate on multiple data types. It allows you to write code that can handle different types of objects in a uniform way, without the need to know the specific type of each object at runtime. Polymorphism allows you to write more flexible and adaptable code, and to create more reusable and modular components.
 
 ```
@@ -246,13 +251,13 @@ drawShapes(shapes);
 
 ```
 
-    In this example, the Shape class is a base class that defines a common interface for different types of shapes. It has a color property and a draw() method, which is an abstract method that does not have a concrete implementation.
+In this example, the Shape class is a base class that defines a common interface for different types of shapes. It has a color property and a draw() method, which is an abstract method that does not have a concrete implementation.
 
-    The Circle and Rectangle classes are subclasses of the Shape class, and they both implement the draw() method with their own concrete implementation. The Circle class has additional properties for storing the radius, and the Rectangle class has additional properties for storing the width and height.
+The Circle and Rectangle classes are subclasses of the Shape class, and they both implement the draw() method with their own concrete implementation. The Circle class has additional properties for storing the radius, and the Rectangle class has additional properties for storing the width and height.
 
-    The drawShapes() function is a polymorphic function that takes an array of shapes as an argument, and uses the draw() method of each shape to draw it. Because the draw() method has different implementations for different types of shapes, the function can draw different types of shapes in a polymorphic way.
+The drawShapes() function is a polymorphic function that takes an array of shapes as an argument, and uses the draw() method of each shape to draw it. Because the draw() method has different implementations for different types of shapes, the function can draw different types of shapes in a polymorphic way.
 
-    By using polymorphism, you can create a flexible and adaptable code, and you can create more reusable and modular components. You can define a common interface for different types of objects, and you can use the interface to interact with the objects in a polymorphic way, without knowing their specific type. This allows you to create more flexible and adaptable code, and to create more reusable and modular components.
+By using polymorphism, you can create a flexible and adaptable code, and you can create more reusable and modular components. You can define a common interface for different types of objects, and you can use the interface to interact with the objects in a polymorphic way, without knowing their specific type. This allows you to create more flexible and adaptable code, and to create more reusable and modular components.
 
 These pillars form the foundation of the object-oriented programming (OOP) model in JavaScript, and allow you to organize and structure your code in a way that is flexible, reusable, and maintainable. By using encapsulation, abstraction, inheritance, and polymorphism, you can create a clear and consistent interface for interacting with objects, and create objects with similar characteristics and behavior.
 
